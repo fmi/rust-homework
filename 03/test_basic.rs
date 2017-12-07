@@ -10,11 +10,11 @@ macro_rules! assert_substring {
 }
 
 macro_rules! assert_match {
-    ($expected:pat, $actual:expr) => {
-        if let $expected = $actual {
+    ($pattern:pat, $actual:expr) => {
+        if let $pattern = $actual {
             assert!(true);
         } else {
-            assert!(false, "Expected to match pattern on {:?}", $actual);
+            assert!(false, "Expected {} to match {:?}", stringify!($pattern), $actual);
         }
     }
 }
