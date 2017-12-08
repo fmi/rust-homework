@@ -50,7 +50,7 @@ fn test_commands_basic() {
     assert_match!(Ok(Command::Help), "help".parse::<Command>());
     assert_match!(Ok(Command::Info), "info".parse::<Command>());
     assert_match!(Ok(Command::Quit), "quit".parse::<Command>());
-    assert_match!(Ok(Command::TryLetter(_)), "try letter x".parse::<Command>());
+    assert_match!(Ok(Command::TryLetter('x')), "try letter x".parse::<Command>());
     assert_match!(Ok(Command::TryWord(_)), "try word xyzzy".parse::<Command>());
 }
 
