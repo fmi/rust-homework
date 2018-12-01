@@ -58,7 +58,7 @@ fn test_equality_floating() {
 }
 
 #[test]
-fn test_equailty_symmetry() {
+fn test_equality_symmetry() {
     assert_eq!(p!(0.0, 0.0, 0.0), p!(EPS / 1000.0, 0.0, 0.0));
     assert_eq!(p!(0.0, 0.0, 0.0), p!(0.0, EPS / 1000.0, 0.0));
     assert_eq!(p!(0.0, 0.0, 0.0), p!(0.0, 0.0, EPS / 1000.0));
