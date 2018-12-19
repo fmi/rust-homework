@@ -37,9 +37,9 @@ impl Write for TestWriter {
     }
 }
 
-struct ErroringMockIO {}
+struct ErroringWriter {}
 
-impl Write for ErroringMockIO {
+impl Write for ErroringWriter {
     fn write(&mut self, _buf: &[u8]) -> io::Result<usize> {
         Err(io::Error::new(io::ErrorKind::Other, "Write Error!"))
     }
@@ -330,7 +330,7 @@ fn test_scoped_logger_with_a_string_tag() {
 
 #[test]
 fn test_erroring_io() {
-    let out = ErroringMockIO {};
+    let out = ErroringWriter {};
 
     let mut logger = BufferedLogger::new(out, 2);
     logger.log("One");
