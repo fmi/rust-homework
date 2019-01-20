@@ -130,4 +130,4 @@ impl Interpreter {
 }
 ```
 
-Примерния тест се намира [тук](https://github.com/fmi/rust-homework/blob/master/04/test_basic.rs).
+Примерният тест се намира [тук](https://github.com/fmi/rust-homework/blob/master/04/test_basic.rs).
